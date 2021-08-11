@@ -1,8 +1,12 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+from ai import response, prediksi
+import json
 
 #create app
 app = FastAPI()
+
+intens = json.loads(open('intest.json').read())
 
 class Chat(BaseModel):
     nomor : int
@@ -23,13 +27,19 @@ async def get():
 
 @app.post("/chatbot")
 async def post(Whatsapp: Chat):
-    kalimat = ["main", "mabar", "ayo"]
-    if Whatsapp.body.lower() in kalimat:
-        body = "okeh ayoklah lobby"
-    else:
-        body = ""
+    ints = prediksi(Whatsapp.body.lower())
+    body = response(ints, intens)
+    log(Whatsapp.nomor, Whatsapp.body)
+    # kalimat = ["main", "mabar", "ayo"]
 
+    # if Whatsapp.body.lower() in kalimat:
+    #     body = "okeh ayoklah lobby"
+    # else:
+    #     body = ""
+    print(body)
     return {
         "nomor" : Whatsapp.nomor,
         "body" : body
     }
+
+print("bot is berlari")
