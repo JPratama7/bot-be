@@ -1,7 +1,7 @@
 {"intents": [
   {"tag": "sapa",
-    "patterns": ["Halo", "Bagaimana kabarmu?", "Apa ada orang?", "Hai", "Selamat siang", "Ada apa", "Hey", "Salam","Apa kabar?","Bagaimana kabar mu?","Assalamu'alaikum","Selamat siang","Selamat sore","Selamat malam"],
-    "responses": ["Hello!", "Ada apa?", "Ada yang bisa saya bantu?","Kabar ku baik, kamu?","Wa'alaikum salam","Pagi juga", "Siang juga", "Malam juga"],
+    "patterns": ["Halo", "Bagaimana kabarmu?", "Apa ada orang?", "Hai", "Selamat siang", "Ada apa", "Hey", "Salam","Apa kabar?","Bagaimana kabar mu?","Assalamualaikum","Selamat siang","Selamat sore","Selamat malam"],
+    "responses": ["Hello!", "Ada apa?", "Ada yang bisa saya bantu?","Kabar ku baik, kamu?","Waalaikum salam","Pagi juga", "Siang juga", "Malam juga","Halo juga", "Hai juga"],
     "context_set": ""
   },
   {"tag": "perpisahan",
