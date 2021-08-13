@@ -27,8 +27,7 @@ async def get():
 
 @app.post("/chatbot")
 async def post(Whatsapp: Chat):
-    ints = prediksi(Whatsapp.body.lower())
-    body = response(ints, intens)
+    body = response(Whatsapp.body)
     log(Whatsapp.nomor, Whatsapp.body)
     # kalimat = ["main", "mabar", "ayo"]
 
@@ -36,7 +35,6 @@ async def post(Whatsapp: Chat):
     #     body = "okeh ayoklah lobby"
     # else:
     #     body = ""
-    print(body)
     return {
         "nomor" : Whatsapp.nomor,
         "body" : body

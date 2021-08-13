@@ -79,13 +79,13 @@ def response(sentence):
 
     return hasil
 
-print("BOT IS RUN")
-
-start = True
-while start:
-    pesan = input("COBA :")
-    if pesan == "stop":
-        start = False
-    else:
-        res = response(pesan)
-        print(res)
+# print("BOT IS RUN")
+#
+# start = True
+# while start:
+#     pesan = input("COBA :")
+#     if pesan == "stop":
+#         start = False
+#     else:
+#         res = response(pesan)
+#         print(res)
